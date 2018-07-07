@@ -1,4 +1,6 @@
-add_library(RCanvas math/vec3.cpp)
+find_package(Pistache REQUIRED)
+
+add_library(RCanvas http/server.cpp)
 
 target_include_directories(
   RCanvas
@@ -9,4 +11,5 @@ target_include_directories(
     ${PROJECT_SOURCE_DIR}/src
 )
 
+target_link_libraries(RCanvas PUBLIC pistache)
 target_compile_features(RCanvas PRIVATE cxx_std_17)

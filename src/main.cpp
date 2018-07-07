@@ -1,3 +1,7 @@
+#include "http/server.hpp"
 #include <iostream>
 
-int main() { return 0; }
+int main() {
+  Pistache::Http::listenAndServe<rcanvas::http::HelloHandler>("*:9080");
+  return 0;
+}

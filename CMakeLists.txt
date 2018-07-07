@@ -23,7 +23,7 @@ if(BUILD_TESTS)
   add_executable(
     rcanvas_test
     test/catch.cpp
-    test/vec3_test.cpp
+    test/float64_test.cpp
   )
   target_link_libraries(rcanvas_test PUBLIC Catch RCanvas)
   target_include_directories(
